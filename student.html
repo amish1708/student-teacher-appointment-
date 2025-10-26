@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Dashboard</h1>
+
+      <!-- Search Teacher -->
+      <section class="form-group">
+        <h2>Search Teacher</h2>
+        <input
+          type="text"
+          id="searchTeacher"
+          placeholder="Enter teacher name or subject"
+        />
+        <button id="searchBtn">Search</button>
+        <div id="searchResults"></div>
+      </section>
+
+      <!-- Book Appointment -->
+      <section class="form-group">
+        <h2>Book Appointment</h2>
+        <input type="text" id="teacherName" placeholder="Teacher Name" />
+        <input type="date" id="appointmentDate" />
+        <input type="time" id="appointmentTime" />
+        <button id="bookBtn">Book</button>
+      </section>
+
+      <!-- Send Message -->
+      <section class="form-group">
+        <h2>Send Message</h2>
+        <textarea
+          id="studentMessage"
+          placeholder="Your message to the teacher"
+        ></textarea>
+        <button id="sendMsgBtn">Send</button>
+      </section>
+
+      <!-- My Appointments -->
+      <section class="form-group">
+        <h2>My Appointments</h2>
+        <div id="myAppointments"></div>
+      </section>
+    </div>
+    <script type="module" src="student.js"></script>
+  </body>
+</html>

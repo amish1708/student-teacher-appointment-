@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="split">
+      <div class="split-left">
+        <h1>Admin Dashboard</h1>
+        <p>Manage Teachers, Students, and Appointments</p>
+        <img src="admin.svg" alt="Illustration" />
+      </div>
+
+      <div class="split-right">
+        <div class="card">
+          <!-- Add Teacher -->
+          <h2>Add Teacher</h2>
+          <label for="teacherName">Name:</label>
+          <input type="text" id="teacherName" placeholder="Teacher Name" />
+          <label for="teacherDept">Department:</label>
+          <input type="text" id="teacherDept" placeholder="Department" />
+          <label for="teacherSubject">Subject:</label>
+          <input type="text" id="teacherSubject" placeholder="Subject" />
+          <button id="addTeacherBtn">Add Teacher</button>
+
+          <!-- Teacher List -->
+          <h2>Teachers</h2>
+          <ul id="teacherList"></ul>
+
+          <!-- Pending Student Registrations -->
+          <h2>Pending Student Registrations</h2>
+          <ul id="pendingStudents"></ul>
+
+          <!-- All Appointments -->
+          <h2>All Appointments</h2>
+          <ul id="allAppointments"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="admin.js" type="module"></script>
+  </body>
+</html>

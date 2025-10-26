@@ -1,0 +1,271 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  display: flex;
+}
+
+.split {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left Side */
+.split-left,
+.split-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  color: #fff;
+}
+
+.split-left {
+  background: transparent;
+}
+
+.split-left h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.split-left p {
+  font-size: 1.2rem;
+  max-width: 400px;
+}
+
+.split-left img {
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+/* Right Side */
+.split-right {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(30px);
+  align-items: center;
+  position: relative;
+  padding: 40px;
+}
+
+/* Cards (Login / Register) */
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px 25px;
+  border-radius: 12px;
+  margin-bottom: 30px; /* Adds gap between login & register */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+}
+
+.input-group i {
+  margin-right: 10px;
+  color: #0072ff;
+  font-size: 16px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Labels */
+.card label {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+
+/* Dropdowns & Dates */
+.card select,
+.card input[type="date"],
+.card input[type="time"],
+.card input[type="text"],
+.card input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+}
+
+/* Buttons */
+button {
+  background: #0072ff;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #005ad3;
+  transform: translateY(-2px);
+}
+
+.register-btn {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* Appointment / Messages List */
+#appointmentsList li,
+#messagesList li {
+  margin: 8px 0;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* student portal */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.form-group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#searchResults,
+#myAppointments {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 6px;
+  min-height: 50px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .split-left,
+  .split-right {
+    flex: none;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .card {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student-Teacher Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="split">
+      <div class="split-left">
+        <h1>Student-Teacher Portal</h1>
+        <p>Schedule appointments easily, stay connected, and save time.</p>
+        <img src="booking.svg.svg" alt="Illustration" />
+      </div>
+
+      <div class="split-right">
+        <!-- Login Card -->
+        <div class="card" id="loginCard">
+          <h2>Login</h2>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" id="loginEmail" />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" id="loginPassword" />
+          </div>
+          <button id="loginBtn">Login</button>
+          <p>Don’t have an account?</p>
+          <button id="showRegisterBtn">Register</button>
+        </div>
+
+        <!-- Register Card -->
+        <div class="card hidden" id="registerCard">
+          <h2>Register</h2>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Name" id="registerName" />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" id="registerEmail" />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              id="registerPassword"
+            />
+          </div>
+          <select id="registerRole">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+          </select>
+          <button id="registerBtn">Register</button>
+          <button id="backToLoginBtn">Back to Login</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teacher Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="split">
+      <div class="split-left">
+        <h1>Teacher Dashboard</h1>
+        <p>Manage appointments and connect with students efficiently.</p>
+        <img src="support.svg" alt="Illustration" />
+      </div>
+
+      <div class="split-right">
+        <div class="card">
+          <!-- Schedule Slot -->
+          <h2>Schedule New Slot</h2>
+          <label for="slotDate">Date:</label>
+          <input type="date" id="slotDate" />
+          <label for="slotTime">Time:</label>
+          <input type="time" id="slotTime" />
+          <label for="slotDesc">Description:</label>
+          <input
+            type="text"
+            id="slotDesc"
+            placeholder="E.g. Office hours, Project discussion"
+          />
+          <button id="scheduleSlotBtn">Add Slot</button>
+
+          <!-- Pending Appointments -->
+          <h2>Pending Appointments</h2>
+          <ul id="appointmentsList"></ul>
+
+          <!-- Messages -->
+          <h2>Messages</h2>
+          <ul id="messagesList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="teacher.js"></script>
+    <script>
+      import { loadAppointments, loadMessages } from "./teacher.js";
+      window.onload = () => {
+        loadAppointments();
+        loadMessages();
+      };
+    </script>
+  </body>
+</html>
